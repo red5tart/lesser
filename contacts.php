@@ -8,6 +8,7 @@ get_header(); ?>
 
 <div class="container">
       <h1 class="page-title">Как нас найти</h1>
+
       <div class="span-wrapper"> <!-- обертка подзаголовка -->
         <span class="">Создано с</span>
         <svg class="icon why-card-pic" width="18" height="18" fill=#626262>

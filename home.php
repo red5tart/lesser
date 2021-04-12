@@ -13,14 +13,7 @@ Template Name: Основная
     <div class="hero">
       <h1 class="hero-title">Курс на социально-ориентированный национальный проект связывает нас с нашим прошлым</h1>
       <?php // ID постоянной страницы, которая указана как главная страница сайта
-      echo get_option('page_on_front');
-      if( is_front_page() ){
-        echo "Это главная страница";
-      }
-      else {
-        echo "это не главная страница";
-      }
-      ?>
+      echo get_option('page_on_front');?>
       <!-- начало мозаики 4х постов -->
       <ul class="article-grid">
         <?php		

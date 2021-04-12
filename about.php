@@ -10,6 +10,9 @@ Template Name: О нас
 <div class="container">
 <h1>О нас</h1>
 
+<?php the_content(); ?>
+
+
 <div class="left">
 
 <h2>История</h2>
