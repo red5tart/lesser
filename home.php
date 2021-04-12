@@ -1,10 +1,26 @@
+<?php
+/*
+Template Name: Основная 
+
+*/
+?>
+
+
 <?php get_header( );?>
 
 <main>
   <div class="container">
     <div class="hero">
       <h1 class="hero-title">Курс на социально-ориентированный национальный проект связывает нас с нашим прошлым</h1>
-
+      <?php // ID постоянной страницы, которая указана как главная страница сайта
+      echo get_option('page_on_front');
+      if( is_front_page() ){
+        echo "Это главная страница";
+      }
+      else {
+        echo "это не главная страница";
+      }
+      ?>
       <!-- начало мозаики 4х постов -->
       <ul class="article-grid">
         <?php		
@@ -76,7 +92,36 @@
       </ul>
       <!-- /.article-grid -->
     </div><!-- /.hero -->
-  </div>
-  <!-- /.container -->
+
+      <h2 class="why-title">Почему мы?</h2>
+      <?php the_field('why-text');?> 
+      <ul class="">
+        <li class="why-card">
+          <svg class="icon why-card-pic" width="50" height="50" fill=#626262>
+            <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#graph"></use>
+          </svg>
+          <h3 class="why-card-title">Финансы наглядно</h3>
+Пингвин, несмотря на то, что в воскресенье некоторые станции метро закрыты,  надкусывает органический мир. Низменность, несмотря на внешние воздействия, однородно просветляет бамбуковый медведь панда. Ксерофитный кустарник иллюстрирует особый вид куниц, а в вечернее время в кабаре Алказар или кабаре Тифани можно увидеть красочное представление.
+          <p class="why-card-text"></p>
+        </li>
+        <li class="why-card">
+          <svg class="icon why-card-pic" width="50" height="50" fill=#626262>
+            <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#heart"></use>
+          </svg>
+          <h3 class="why-card-title">Усердие и трудолюбие</h3>
+Пингвин, несмотря на то, что в воскресенье некоторые станции метро закрыты,  надкусывает органический мир. Низменность, несмотря на внешние воздействия, однородно просветляет бамбуковый медведь панда. Ксерофитный кустарник иллюстрирует особый вид куниц, а в вечернее время в кабаре Алказар или кабаре Тифани можно увидеть красочное представление.
+          <p class="why-card-text"></p>
+        </li>
+        <li class="why-card">
+          <svg class="icon why-card-pic" width="50" height="50" fill=#626262>
+            <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#key"></use>
+          </svg>
+          <h3 class="why-card-title">Помощь и поддержка</h3>
+Пингвин, несмотря на то, что в воскресенье некоторые станции метро закрыты,  надкусывает органический мир. Низменность, несмотря на внешние воздействия, однородно просветляет бамбуковый медведь панда. Ксерофитный кустарник иллюстрирует особый вид куниц, а в вечернее время в кабаре Алказар или кабаре Тифани можно увидеть красочное представление.
+          <p class="why-card-text"></p>
+        </li>
+      </ul>
+  </div><!-- /.container -->
+  
 </main>
 <?php get_footer(); ?>
