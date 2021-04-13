@@ -172,3 +172,82 @@ p {
 .menu-item-type-post_type a:hover {
   color: #000;
 }
+
+.footer_menu {
+  background-color: #262626;
+  padding: 112px 0;
+}
+
+.footer_menu h3 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+}
+
+.footer_menu .row-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 15px;
+  margin-bottom: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer_menu .row-wrapper ul {
+  list-style: none;
+}
+
+.footer_menu .row-wrapper ul li {
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.footer_menu .row-wrapper ul a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.footer_menu .row-wrapper ul a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer_menu .row-wrapper ul a svg {
+  fill: rgba(255, 255, 255, 0.4);
+}
+
+.footer_menu .row-wrapper ul a svg:hover {
+  fill: rgba(255, 255, 255, 0.8);
+}
+
+.footer_menu .row-wrapper .about {
+  width: 23%;
+  margin-right: 120px;
+}
+
+.footer_menu .row-wrapper .portfolio {
+  width: 50%;
+}
+
+.footer_menu .row-wrapper .portfolio .footer-menu-wrapper .footer-menu {
+  margin: 0;
+}
+
+.footer_menu .row-wrapper .social {
+  width: 16.67%;
+}
+
+.footer_menu .row-wrapper .social-wrapper {
+  margin: 0;
+}
+
+.bottom {
+  width: 30%;
+  margin: auto;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+  text-align: center;
+}

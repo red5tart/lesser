@@ -1,9 +1,9 @@
   <footer class="footer_menu">
     <div class="container">
-      <div class="wrapper">
+      <div class="row-wrapper">
         <div class="about">
           <h3 class="about-title">О нас</h3>
-          <span class="about-text"><?php echo get_field('o_nas', 84);?></span>
+          <p class="about-text"><?php echo get_field('o_nas', 84);?></p>
         </div>
         <div class="portfolio">
           <h3 class="portfolio-title">Портфолио</h3>
@@ -22,46 +22,69 @@
           <h3 class="social-title">Мы в соц сетях</h3>
           <ul class="social-wrapper">
             <?php if( get_field('tg', 84) ) : ?>
-              <a href="<?php echo the_field('tg', 84); ?>" class="">
-                <li class="social-item">Телеграм</li>
-              </a>
+              <li class="social-item">
+              <a href="<?php echo the_field('tg', 84); ?>" class="">  
+              <svg class="icon why-card-pic" width="18" height="18" >
+                <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#telegram"></use>
+              </svg>                 
+              Телеграм</a></li>
             <?php endif; 
+
             if( get_field('vk', 84) ) : ?>
-              <a href="<?php echo the_field('vk', 84); ?>" class="">
-                <li class="social-item">ВКонтакте</li>
-              </a>
-            <?php endif; 
+              <li class="social-item">
+              <a href="<?php echo the_field('vk', 84); ?>" class="">  
+              <svg class="icon why-card-pic" width="18" height="18" >
+                <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#vkontakte"></use>
+              </svg>                 
+              ВКонтакте</a></li>
+            <?php endif;
+
             if( get_field('tw', 84) ) : ?>
-              <a href="<?php echo the_field('tw', 84); ?>" class="">
-                <li class="social-item">Twitter</li>
-              </a>
+              <li class="social-item">
+              <a href="<?php echo the_field('tw', 84); ?>" class="">  
+              <svg class="icon why-card-pic" width="18" height="18" >
+                <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#twitter"></use>
+              </svg>                 
+              Твиттер</a></li>
             <?php endif;
+
             if( get_field('fb', 84) ) : ?>
-              <a href="<?php echo the_field('fb', 84); ?>" class="">
-                <li class="social-item">Facebook</li>
-              </a>
+              <li class="social-item">
+              <a href="<?php echo the_field('fb', 84); ?>" class="">  
+              <svg class="icon why-card-pic" width="18" height="18" >
+                <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#facebook"></use>
+              </svg>                 
+              Фейсбук</a></li>
             <?php endif;
+            
             if( get_field('ig', 84) ) : ?>
-              <a href="<?php echo the_field('ig', 84); ?>" class="">
-                <li class="social-item">Инстаграм</li>
-              </a>
+              <li class="social-item">
+              <a href="<?php echo the_field('ig', 84); ?>" class="">  
+              <svg class="icon why-card-pic" width="18" height="18" >
+                <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#instagram"></use>
+              </svg>                 
+              Инстаграм</a></li>
             <?php endif;
+
             if( get_field('yt', 84) ) : ?>
-              <a href="<?php echo the_field('yt', 84); ?>" class="">
-                <li class="social-item">YouTube</li>
-              </a>
+              <li class="social-item">
+              <a href="<?php echo the_field('yt', 84); ?>" class="">  
+              <svg class="icon why-card-pic" width="18" height="18" >
+                <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#key"></use>
+              </svg>                 
+              YouTube</a></li>
             <?php endif;?>
 
           </ul><!-- /.social-wrapper -->
         </div><!-- /.social -->
-      </div><!-- /.wrapper -->
+      </div><!-- /.row-wrapper -->
       <div class="bottom">
         <span>© <?php echo current_time('Y'); ?> Все права защищены. Выполнил с </span>
-        <svg class="icon why-card-pic" width="18" height="18" fill=#626262>
+        <svg class="icon why-card-pic" width="22" height="22" fill=#626262>
           <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#heart-filled"></use>
         </svg>
         <span> Иванов Иван</span>
-      </div>
+      </div><!-- /.bottom -->
     </div><!-- /.container -->
   </footer>
   <?php wp_footer();?>
