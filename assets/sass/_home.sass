@@ -109,4 +109,104 @@
         color: white
 .blog-section-wrapper
   background-color: rgba(45, 64, 89, 0.06)
-  margin-bottom: 96px
+  padding-bottom: 96px
+  padding-top: 6em
+  h2
+    width: 50%
+    margin: auto
+    text-align: center
+    font-size: 34px
+    padding-bottom: 96px
+  ul
+    list-style: none
+    display: flex
+    justify-content: space-between
+    margin: 0
+  .blog-post
+    &-item
+      background-color: #fff
+      margin: 0 25px
+      border-radius: 4px
+      margin-bottom: 15px
+      overflow: hidden
+      text-align: center
+      a
+        text-decoration: none
+      h4
+        font-size: 24px
+        color: rgba(0, 0, 0, 0.8)
+        line-height: 1.1
+    &-title
+      padding: 20px 20px 0
+    &-text
+      padding: 0 20px
+    &-more
+      font-size: 16px
+      margin-bottom: 50px
+      display: inline-block
+      border: 2px solid #1FB57B
+      color: #1FB57B
+      text-align: center
+      padding: 10px 20px
+      border-radius: 25px
+      cursor: pointer
+      background-color: #fff
+      text-decoration: none
+      background-repeat: no-repeat
+      background-position: center right 20px
+      &:focus, &:hover
+        color: #ffffff
+        background-image: url('../images/arrow-right-thick.svg')
+        background-color: #1FB57B
+        padding-right: 50px
+        transition: 0.2s
+.reviews
+  &-wrapper
+    width: 50%
+    margin-left: 25%
+    margin-bottom: 3.5em
+    text-align: center
+    padding-top: 80px
+  &-title
+    margin-bottom: 20px
+    font-weight: 400
+    font-size: 34px
+    color: #fff
+    letter-spacing: 1px
+    color: rgba(0, 0, 0, 0.7)
+  &-list
+    list-style: none
+    display: flex
+    justify-content: space-between
+    margin: 0
+  &-section
+    &-item
+      background-color: rgba(45, 64, 89, 0.06)
+      margin: 0 25px
+      border-radius: 4px
+      margin-bottom: 15px
+      overflow: hidden
+      text-align: center
+      width: 48%
+      padding: 0px 40px 50px 40px
+      position: relative
+      border-radius: 4px
+      margin-bottom: 96px
+      .why-card
+        &-icon
+          &-container
+            position: relative
+            display: block
+            margin: auto
+            border: 2px solid #fff
+            background-color: #fff
+            align-items: center
+            bottom: 30px
+    &-author
+      font-size: 17.5px
+    &-text
+      p
+        font-size: 20px
+        line-height: 1.6em
+        color: #999999
+        font-family: "Playfair Display", Arial, serif

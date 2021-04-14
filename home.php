@@ -132,125 +132,134 @@ Template Name: Основная
   </div><!-- /.container -->
 
   <section class="teal">
-  <div class="container">
-    <div class="why-wrapper">
-      <h2 class="why-title">Почему мы?</h2>
-      <p class="why-text"><?php the_field('under_title');?></p>
-    </div>
-    <ul class="why-cards-wrapper">
+    <div class="container">
+      <div class="why-wrapper">
+        <h2 class="why-title">Почему мы?</h2>
+        <p class="why-text"><?php the_field('under_title');?></p>
+      </div>
+      <ul class="why-cards-wrapper">
 
-      <li class="why-card why-card-1">
-        <div class="why-card-icon-container">
-          <svg class="why-card-icon" width="40" height="40" fill=#ffffff>
-            <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#graph"></use>
-          </svg>
-        </div>
-        <h3 class="why-card-title">Финансы наглядно</h3>
-        <p class="why-card-text"><?php the_field('left');?></p>
-      </li>
+        <li class="why-card why-card-1">
+          <div class="why-card-icon-container">
+            <svg class="why-card-icon" width="40" height="40" fill=#ffffff>
+              <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#graph"></use>
+            </svg>
+          </div>
+          <h3 class="why-card-title">Финансы наглядно</h3>
+          <p class="why-card-text"><?php the_field('left');?></p>
+        </li>
 
-      <li class="why-card why-card-2">
-        <div class="why-card-icon-container">
-          <svg class="why-card-icon" width="40" height="40" fill=#ffffff>
-            <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#heart"></use>
-          </svg>
-        </div>      
-        <h3 class="why-card-title">Усердие и трудолюбие</h3>
-        <p class="why-card-text"><?php the_field('middle');?></p>
-      </li>
+        <li class="why-card why-card-2">
+          <div class="why-card-icon-container">
+            <svg class="why-card-icon" width="40" height="40" fill=#ffffff>
+              <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#heart"></use>
+            </svg>
+          </div>      
+          <h3 class="why-card-title">Усердие и трудолюбие</h3>
+          <p class="why-card-text"><?php the_field('middle');?></p>
+        </li>
 
-      <li class="why-card why-card-3">
-        <div class="why-card-icon-container">
-          <svg class="why-card-icon" width="40" height="40" fill=#ffffff>
-            <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#key"></use>
-          </svg>
-        </div>
-        <h3 class="why-card-title">Помощь и поддержка</h3>
-        <p class="why-card-text"><?php the_field('right');?></p>
-      </li>
-    </ul>
-  </div><!-- /.container -->
+        <li class="why-card why-card-3">
+          <div class="why-card-icon-container">
+            <svg class="why-card-icon" width="40" height="40" fill=#ffffff>
+              <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#key"></use>
+            </svg>
+          </div>
+          <h3 class="why-card-title">Помощь и поддержка</h3>
+          <p class="why-card-text"><?php the_field('right');?></p>
+        </li>
+      </ul>
+    </div><!-- /.container -->
   </section>
 
 <section class="blog-section-wrapper">
-  <h2>Блог</h2>
-  <ul class="blog-posts-list">
-    <?php 
-      //объявляем глобальную переменную
-      global $post;
-  
-      $myposts = get_posts([
-        'numberposts' => 3,  
-        'orderby' => 'date', 
-        'order' => 'DESC',
-        'category_name' => 'blog', 
-      ]); 
-      //проверяем, есть ли посты
-      if( $myposts ){ 
-        //если есть, запускаем цикл 
-        foreach( $myposts as $post ){
-        setup_postdata( $post ); 
-        ?>
-      <!-- Выводим записи -->
-      <li class="blog-section-item">
-        <a class="blog-section-permalink" href="<?php echo get_the_permalink(); ?>">
-          <h4 class="blog-section-title"><?php echo wp_trim_words(get_the_title(), 6, '...'); ?></h4>
-        </a>
-        <img src="<?php 
-        if( has_post_thumbnail() ) {
-            echo get_the_post_thumbnail_url( null, 'medium_large');
-          }
-          else {
-            echo get_template_directory_uri().'/assets/images/img-default.png';
-          }
-        ?>" alt="">
-        <p class="blog-section-text"><?php echo wp_trim_words(get_the_content(), 20, '...'); ?></p>
-        <a href="<?php echo get_the_permalink(); ?>" class="blog-section-more">Читать далее</a>
-      </li>
+  <div class="container">
+    <h2>Блог</h2>
+    <ul class="blog-posts-list">
       <?php 
+        //объявляем глобальную переменную
+        global $post;
+    
+        $myposts = get_posts([
+          'numberposts' => 3,  
+          'orderby' => 'date', 
+          'order' => 'DESC',
+          'post_type' => 'blog', 
+        ]); 
+        //проверяем, есть ли посты
+        if( $myposts ){ 
+          //если есть, запускаем цикл 
+          foreach( $myposts as $post ){
+          setup_postdata( $post ); 
+          ?>
+        <!-- Выводим записи -->
+        <li class="blog-post-item">
+          <a class="blog-post-permalink" href="<?php echo get_the_permalink(); ?>">
+            <img src="<?php 
+              if( has_post_thumbnail() ) {
+                  echo get_the_post_thumbnail_url( null, 'medium_large');
+                }
+                else {
+                  echo get_template_directory_uri().'/assets/images/img-default.png';
+                }
+              ?>" alt="">
+            <h4 class="blog-post-title"><?php echo wp_trim_words(get_the_title(), 6, '...'); ?></h4>
+          </a>
+          <p class="blog-post-text"><?php echo wp_trim_words(get_the_content(), 19, '...'); ?></p>
+          <a href="<?php echo get_the_permalink(); ?>" class="blog-post-more">Читать далее</a>
+        </li>
+        <?php 
+          }
+        } else {
+          ?><p>Постов нет</p><?php
         }
-      } else {
-        ?><p>Постов нет</p><?php
-      }
-    wp_reset_postdata(); // Сбрасываем $post
-    ?>
-  </ul>
+      wp_reset_postdata(); // Сбрасываем $post
+      ?>
+    </ul>
+  </div>
 </section><!-- /.blog-section-wrapper -->
 
 <section class="reviews">
-  <div class="reviews-wrapper">
-    <h2 class="reviews-title">Отзывы</h2>
-    <p class="reviews-text"><?php the_field('under_reviews_title');?></p>
-  </div>
-  <ul class="posts-list">
-    <?php 
-      //объявляем глобальную переменную
-      global $post;
-  
-      $myposts = get_posts([
-        'numberposts' => 2,  
-        'post_type' => 'review',
-        'orderby' => 'rand', 
-      ]); 
-      //проверяем, есть ли посты
-      if( $myposts ){ 
-        //если есть, запускаем цикл 
-        foreach( $myposts as $post ){
-        setup_postdata( $post ); 
-        ?>
-      <!-- Выводим записи -->
-      <li class="review-section-item">
-        <div class="review-section-text"><?php the_content(); ?></div>
-        <div class="review-section-author"><?php the_author(); ?></div>
-      </li>
+  <div class="container">
+    <div class="reviews-wrapper">
+      <h2 class="reviews-title">Отзывы</h2>
+      <p class="reviews-text"><?php the_field('under_reviews_title');?></p>
+    </div>
+    <ul class="reviews-list"> 
       <?php 
+        //объявляем глобальную переменную
+        global $post;
+    
+        $myposts = get_posts([
+          'numberposts' => 2,  
+          'post_type' => 'review',
+          'orderby' => 'rand', 
+        ]); 
+        //проверяем, есть ли посты
+        if( $myposts ){ 
+          //если есть, запускаем цикл 
+          foreach( $myposts as $post ){
+          setup_postdata( $post ); 
+          ?>
+        <!-- Выводим записи -->
+        <li class="reviews-section-item">
+          <div class="why-card-icon-container">
+            <svg class="why-card-icon" width="30" height="30" fill=#C0C5CD>
+              <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#quote-right"></use>
+            </svg>
+          </div>
+          <div class="reviews-section-text"><?php the_content(); ?></div>
+          <div class="reviews-section-author"><?php the_author(); ?></div>
+        </li>
+        <?php 
+          }
+        } else {
+          ?><p>Постов нет</p><?php
         }
-      } else {
-        ?><p>Постов нет</p><?php
-      }
-    wp_reset_postdata(); // Сбрасываем $post
-    ?>
-  </ul>
+      wp_reset_postdata(); // Сбрасываем $post
+      ?>
+    </ul>
+  </div>
 </section><!-- /.reviews -->
 
 
