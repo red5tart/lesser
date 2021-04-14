@@ -1,0 +1,112 @@
+.hero
+  &-title
+    width: 64%
+    margin: auto
+    text-align: center
+    line-height: 1.1
+    padding: 126px 0
+    font-size: 36px
+    .h1
+      margin: 0 0 30px 0
+.article
+  &-grid
+    margin: 0
+    padding: 0
+    list-style: none
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: repeat(2, 240px)
+    grid-column-gap: 30px
+    grid-row-gap: 30px
+    padding-bottom: 6em
+    &-desc
+      padding: 30px
+      position: absolute
+      bottom: 0
+      width: 100%
+      a
+        text-decoration: none
+        category-link
+        color: rgba(255, 255, 255, 0.5)
+      h3
+        color: rgba(255, 255, 255, 0.9)
+        font-size: 24px
+        margin-bottom: 10px
+    &-thumb
+      position: absolute
+      height: 100%
+      width: 100%
+      left: 0
+      top: 0
+      z-index: -1
+      object-fit: cover
+    &-item
+      float: left
+      background-size: cover
+      background-position: center center
+      position: relative
+      overflow: hidden
+      border-radius: 4px
+      &-1
+        grid-area: 1 / 1 / 3 / 3
+      &-2
+        grid-area: 1 / 3 / 2 / 5
+.teal
+  background: linear-gradient(45deg, #1fb57b 0%, #258dc8 100%)
+  width: 100%
+  padding: 96px 0
+
+  .container
+    margin-right: auto
+    margin-left: auto
+    padding-left: 15px
+    padding-right: 15px
+.why
+  &-wrapper
+    width: 50%
+    margin-left: 25%
+    margin-bottom: 3.5em
+    text-align: center
+  &-title
+    margin-bottom: 20px
+    font-weight: 400
+    font-size: 34px
+    color: #fff
+    letter-spacing: 1px
+  &-text
+    color: rgba(255, 255, 255, 0.7)
+  &-cards-wrapper
+    width: 100%
+    margin: 0
+    text-align: center
+    display: flex
+    justify-content: space-between
+    //border: thin solid white
+  &-card
+    //border: thin dashed lightgrey
+    width: 33.33%
+    &-title
+      color: #fff
+      font-size: 24px
+      margin-top: 15px
+    &-text
+      color: rgba(255, 255, 255, 0.7)
+    &-icon
+      height: 90px
+      top: 0
+      bottom: 0
+      margin: auto
+      &-container
+        position: relative
+        display: block
+        margin: auto
+        height: 90px
+        width: 90px
+        border-radius: 50%
+        border: 2px solid rgba(255, 255, 255, 0.7)
+        background-color: transparent
+        align-items: center
+        color: white
+.blog-section-wrapper
+  background-color: rgba(45, 64, 89, 0.06)
+  margin-bottom: 96px

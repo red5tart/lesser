@@ -79,11 +79,11 @@
         </div><!-- /.social -->
       </div><!-- /.row-wrapper -->
       <div class="bottom">
-        <span>© <?php echo current_time('Y'); ?> Все права защищены. Выполнил с </span>
+        <span>© <?php echo current_time('Y'); ?> Все права защищены. Выполнила с </span>
         <svg class="icon why-card-pic" width="22" height="22" fill=#626262>
           <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#heart-filled"></use>
         </svg>
-        <span> Иванов Иван</span>
+        <span> Пенелопа Кошмарик</span>
       </div><!-- /.bottom -->
     </div><!-- /.container -->
   </footer>
