@@ -481,6 +481,64 @@ p {
   font-family: "Playfair Display", Arial, serif;
 }
 
+h1 {
+  margin: 96px 0px 68px 0px;
+  font-size: 34px;
+  text-align: center;
+  line-height: 1;
+}
+
+.h2 {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: "Playfair Display", Arial, serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 30px 0;
+  letter-spacing: 1px;
+}
+
+.pic-in-text {
+  float: left;
+  padding: 10px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  -webkit-box-shadow: 0px 9px 29px -9px rgba(0, 0, 0, 0.13);
+          box-shadow: 0px 9px 29px -9px rgba(0, 0, 0, 0.13);
+}
+
+.flex-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 96px;
+}
+
+.about-left {
+  width: 66%;
+  padding: 0 16px;
+}
+
+.about-right {
+  width: 33%;
+  padding: 0 15px;
+}
+
+.about-right-text-wrapper {
+  padding: 0 15px 40px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.about-menu {
+  padding-left: 15px;
+}
+
+.blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #eeeeee;
+}
+
 .contact-section {
   padding: 96px 0;
 }
