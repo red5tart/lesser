@@ -20,33 +20,44 @@ get_header(); ?>
 
     <div class="contact-row-wrapper">
       <div class="left">
-        <h2 class="left-title">Контакты (ACF)</h2>
+        <h2 class="left-title">Контакты</h2>
         <div class="left-address">
-          <svg class="icon why-card-pic" width="22" height="22" fill=#626262>
+          <svg class="icon why-card-pic" width="26" height="26" fill=#626262>
             <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#map"></use>
           </svg>
           <?php 
           //проверка наличия поля address
           $address = get_field('address_ACF');
           if ($address) {echo '<address>' . $address . '</address>';}?>
-        </div>
+        </div><!-- /.left-address -->
 
-          
+        <div class="left-phone">
+          <svg class="icon why-card-pic" width="22" height="22" fill=#626262>
+            <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#phone"></use>
+          </svg>
+          <?php 
+            //проверка наличия поля phone
+            $phone = get_field('phone_ACF');
+            if ($phone) {echo '<a href="tel:' . $phone . '">' . $phone . '</a>';} ?>
+        </div><!-- /.left-phone -->
+        <div class="left-email">
+          <svg class="icon why-card-pic" width="22" height="22" fill=#626262>
+            <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#envelope"></use>
+          </svg>
+          <?php 
+          //проверка наличия поля email
+            $email = get_field('email_ACF');
+            if ($email) {echo '<a href="mailto:' . $email . '">' . $email . '</a>';}?> 
+        </div><!-- /.left-email -->
+        <div class="left-www">
+          <svg class="icon why-card-pic" width="22" height="22" fill=#626262>
+            <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#globe"></use>
+          </svg>
         <?php 
-          //проверка наличия поля phone
-          $phone = get_field('phone_ACF');
-          if ($phone) {echo '<a href="tel:' . $phone . '">' . $phone . '</a>';} ?>
-
-        <?php 
-        //проверка наличия поля email
-          $email = get_field('email_ACF');
-          if ($email) {echo '<a href="mailto:' . $email . '">' . $email . '</a>';}?> 
-
-        <?php 
-        //проверка наличия поля email
+        //проверка наличия поля вебсайт
           $www = get_field('www_ACF');
-          if ($www) {echo '<a href="mailto:' . $www . '">' . $www . '</a>';}?> 
-
+          if ($www) {echo '<a href="' . $www . '">' . $www . '</a>';}?>
+        </div><!-- /.left-www -->
       </div><!-- /.left -->
       <div class="right">  
         <form action="form.php" class="contacts-form" method="POST"><!-- форма HTML -->
