@@ -7,8 +7,7 @@ if ( ! function_exists( 'lesser_theme_setup' ) ) :
 		add_theme_support( 'title-tag' );
 
 		//Добавление миниатюр
-		add_theme_support( 'post-thumbnails', array( 'post', 'blog' ) );// Только для post и blog
-		
+		add_theme_support( 'post-thumbnails', array( 'post', 'blog', 'page' ) );// Для записей post, blog и page
 		// Добавление пользовательского логотипа
 		add_theme_support( 'custom-logo', [
 			'width'       => 27,
