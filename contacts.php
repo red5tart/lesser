@@ -11,7 +11,7 @@ get_header(); ?>
     <h2 class="contact-titleblock">Как нас найти</h1>
     <p class="span-wrapper"> <!-- обертка подзаголовка -->
       <span class="">Создано с</span>
-      <svg class="icon why-card-pic" width="18" height="18" fill=#626262>
+      <svg class="icon why-card-pic" width="18" height="18" fill=#7f7f7f>
         <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#heart"></use>
       </svg>
       <span>клевыми чуваками из <a href="https://freehtml5.co/" class="">FreeHTML5.co</a></span>
@@ -21,18 +21,18 @@ get_header(); ?>
     <div class="contact-row-wrapper">
       <div class="left">
         <h2 class="left-title">Контакты</h2>
-        <div class="left-address">
-          <svg class="icon why-card-pic" width="26" height="26" fill=#626262>
+        <div class="line left-addr">
+          <svg class="icon why-card-pic" width="26" height="26" fill=#7f7f7f>
             <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#map"></use>
           </svg>
           <?php 
           //проверка наличия поля address
           $address = get_field('address_ACF');
-          if ($address) {echo '<address>' . $address . '</address>';}?>
-        </div><!-- /.left-address -->
+          if ($address) {echo '<addr>' . $address . '</addr>';}?>
+        </div><!-- /.left-addr -->
 
-        <div class="left-phone">
-          <svg class="icon why-card-pic" width="22" height="22" fill=#626262>
+        <div class="line left-phone">
+          <svg class="icon why-card-pic" width="22" height="22" fill=#7f7f7f>
             <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#phone"></use>
           </svg>
           <?php 
@@ -40,8 +40,8 @@ get_header(); ?>
             $phone = get_field('phone_ACF');
             if ($phone) {echo '<a href="tel:' . $phone . '">' . $phone . '</a>';} ?>
         </div><!-- /.left-phone -->
-        <div class="left-email">
-          <svg class="icon why-card-pic" width="22" height="22" fill=#626262>
+        <div class="line left-email">
+          <svg class="icon why-card-pic" width="22" height="22" fill=#7f7f7f>
             <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#envelope"></use>
           </svg>
           <?php 
@@ -49,8 +49,8 @@ get_header(); ?>
             $email = get_field('email_ACF');
             if ($email) {echo '<a href="mailto:' . $email . '">' . $email . '</a>';}?> 
         </div><!-- /.left-email -->
-        <div class="left-www">
-          <svg class="icon why-card-pic" width="22" height="22" fill=#626262>
+        <div class="line left-www">
+          <svg class="icon why-card-pic" width="22" height="22" fill=#7f7f7f>
             <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#globe"></use>
           </svg>
         <?php 

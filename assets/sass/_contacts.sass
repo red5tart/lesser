@@ -18,11 +18,23 @@
   &-row-wrapper
     display: flex
     justify-content: space-between
+    .line
+      display: flex
+      align-items: center
+      svg
+        margin-right: 15px
     .left
       width: 25%
       display: flex
-      flex-direction: column
-      &-address
-        display: flex
+      flex-direction: column      
+      a
+        color: #7f7f7f
+        text-decoration: none
+        margin: 10px 0
+      &-addr
+        align-items: start
+      &-email, &-www
+        a
+          color: #1FB57B
     .right
       width: 66%
