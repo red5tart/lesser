@@ -97,7 +97,7 @@ if ( ! function_exists( 'lesser_theme_setup' ) ) :
 				//'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
 				'hierarchical'        => false,
 				'supports'            => [ 'title', 'author', 'editor', 'thumbnail'], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
-				'taxonomies'          => [],
+				'taxonomies'          => ['category'],
 				'has_archive'         => true,
 				'rewrite'             => true,
 				'query_var'           => true,
