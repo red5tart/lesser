@@ -481,6 +481,53 @@ p {
   font-family: "Playfair Display", Arial, serif;
 }
 
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 70px;
+}
+
+.post-picture {
+  padding-right: 25px;
+}
+
+.post-picture-thumb {
+  margin-right: 25px;
+  -webkit-box-shadow: 0px 9px 29px -9px rgba(0, 0, 0, 0.13);
+          box-shadow: 0px 9px 29px -9px rgba(0, 0, 0, 0.13);
+  overflow: hidden;
+  border-radius: 4px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-bottom: 40px;
+}
+
+.post-wrapper-content {
+  width: 75%;
+  padding: 0 15px;
+}
+
+.post-wrapper-sideline {
+  padding: 0 30px 30px 30px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.post-side-menu {
+  margin: 0 0 30px 26px;
+  list-style: none;
+  list-style-image: url("../images/check.svg");
+}
+
+.post-side-menu .menu-item {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.post-side-menu .menu-item a {
+  padding-left: 15px;
+}
+
 h1 {
   margin: 96px 0px 68px 0px;
   font-size: 34px;
